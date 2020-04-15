@@ -45,7 +45,17 @@ RULES FOR RECURSION
 # TO-DO: implement the Merge Sort function below USING RECURSION
 
 
+def merge_sort(arr):
+    # TO-DO
+    if len(arr) <= 1:
+        return arr
+    l = merge_sort(arr[:len(arr) // 2])
+    r = merge_sort(arr[len(arr) // 2:])
+    return merge(l, r)
+
 # STRETCH: implement an in-place merge sort algorithm
+
+
 def merge_in_place(arr, start, mid, end):
     # TO-DO
 
